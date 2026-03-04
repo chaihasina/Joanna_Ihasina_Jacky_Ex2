@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
 public class Skieur : MonoBehaviour
 {
     public InputAction mouvHoriz;
@@ -25,7 +26,11 @@ public class Skieur : MonoBehaviour
         mouvVert.Disable();
     }
 
-
+    void Update()
+    {
+        Vector2 movement = new Vector2(mouvHoriz.ReadValue<float>(), mouvVert.ReadValue<float>());
+        transform.Translate(movement * Time.deltaTime * vitesse);
+    }
 
     // Il faut appeller cette fonction dans la collision avec le yéti.
     void DeconnecterCamera()

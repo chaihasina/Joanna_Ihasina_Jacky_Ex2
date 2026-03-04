@@ -6973,6 +6973,8 @@ PositionConstraint:
   m_Sources:
   - sourceTransform: {fileID: 718793150}
     weight: 1
+  - sourceTransform: {fileID: 0}
+    weight: 1
 --- !u!1 &526413167
 GameObject:
   m_ObjectHideFlags: 0
@@ -10238,6 +10240,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fcece5481b0bf048bc595f94e622efb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Skieur
+  mouvHoriz:
+    m_Name: Mouv Horiz
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1342d08c-2bb0-4185-839c-c8579eb7068b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 1D Axis
+      m_Id: fbc12b4b-ddf8-4b88-9452-d8d8b513eee2
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouv Horiz
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: f035159b-c49f-4581-8015-bb0d51a8d856
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouv Horiz
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: c80397d8-4418-4792-a1e4-ebbb45901de0
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouv Horiz
+      m_Flags: 8
+    m_Flags: 0
+  mouvVert:
+    m_Name: Mouv Vert
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 987f146f-8a35-496d-8ad1-b0e804210b32
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 1D Axis
+      m_Id: 4aa0577a-6785-4d09-927c-1ae83fceb571
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouv Vert
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: d8302756-a7e6-4bfb-a43b-766e583a77cc
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouv Vert
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: 87a2136e-0e6b-4161-a206-ddafc7db14d1
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouv Vert
+      m_Flags: 8
+    m_Flags: 0
+  vitesse: 5
 --- !u!61 &718793152
 BoxCollider2D:
   m_ObjectHideFlags: 0
